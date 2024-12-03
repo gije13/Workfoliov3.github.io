@@ -1,0 +1,110 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 5px 10px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 50px; 
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.logo {
+    height: 30px; 
+}
+
+.brand-name {
+    font-size: 16px; 
+    color: white;
+    font-weight: bold;
+}
+
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem; 
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1rem); 
+    font-weight: normal;
+    transition: color 0.3s, font-weight 0.3s;
+    padding: 2px 5px; 
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.nav-menu a.active {
+    color: rgb(240, 247, 244);
+    font-weight: bold;
+}
+
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none; 
+        flex-direction: column; 
+        background-color: rgba(0, 0, 0, 0.95); 
+        position: absolute;
+        top: 50px; 
+        left: 0;
+        width: 100%; 
+        padding: 10px 0;
+    }
+
+    .nav-menu.show ul {
+        display: flex; 
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 40px; 
+        padding: 5px;
+    }
+
+    .logo {
+        height: 25px; 
+    }
+
+    .brand-name {
+        font-size: 14px; 
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem; 
+    }
+}

@@ -1,0 +1,111 @@
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dbd7d7;
+    color: rgb(39, 38, 38);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    padding-top: 80px;
+}
+
+#services {
+    text-align: center;
+    padding: 60px 20px;  
+    background-color: #000;
+    color: white;
+}
+
+#services h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem); 
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: grid;
+    margin-bottom: 100px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto; 
+    gap: 20px;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 1200px; 
+    width: 100%;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.service-box {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%; 
+    max-width: 350px; 
+    height: auto;
+    min-height: 300px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.service-box h2 {
+    background-color: gray;
+    border: gray;
+    padding: 5px;
+    font-size: clamp(1.2rem, 3vw, 1.6rem); 
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    font-size: 16px;
+    background-color: gray;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; 
+}
+
+.learn-more:hover {
+    background-color: #585a5a;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .service-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .service-box {
+        max-width: 100%; 
+    }
+
+    #services h1 {
+        font-size: clamp(1.6rem, 4vw, 2.5rem); 
+    }
+}

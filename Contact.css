@@ -1,0 +1,167 @@
+body {
+   font-family: Arial, sans-serif;
+   background-color: #000;
+   color: #fff;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;  
+   flex-direction: column; 
+}
+
+.contact-2 {
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 20px;
+   text-decoration: none;
+   text-align: left;
+}
+
+.contact-info-2 h1 {
+   font-size: 2rem;
+   margin-bottom: 10px;
+   text-align: left;
+}
+
+.contact-info-2 p {
+   font-size: 1rem;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   text-align: left;
+   margin-left: 20px;
+}
+
+.contact-container-2 {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 60px;
+   justify-items: left;
+   padding: 0 20px;
+   width: 100%;
+   margin-top: 30px;  
+}
+
+.con-info-2 {
+   background-color: #b0a894;
+   padding: 20px;
+   border-radius: 15px;
+   margin: 10px auto;
+   margin-top: 20px;
+   width: 70%;
+   height: auto;  
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   color: #000;
+}
+
+.icon-2 {
+   color: #edeff0;
+}
+
+.contact-info-2 ul {
+   list-style: none;
+   padding: 0;
+}
+
+.contact-info-2 ul li {
+   margin-top: 10px;
+   font-size: 1rem;
+}
+
+.contact-form-2 {
+   padding: 20px;
+   border-radius: 15px;
+   background-image: url('form.png');  
+   background-size: cover;  
+   background-position: center;  
+   background-repeat: no-repeat;  
+   margin: 10px auto;
+   width: 100%;
+   max-width: 600px;
+   height: auto;
+}
+
+
+.contact-form-2 h1 {
+   text-align: center;
+}
+
+.contact-form-2 input,
+.contact-form-2 textarea,
+.contact-form-2 select {
+   width: 100%;  
+   padding: 10px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 5px;
+   background-color: #edeff0;
+}
+
+.contact-form-2 button {
+   width: 100%;
+   padding: 10px;
+   background-color: #252729;
+   color: #fff;
+   border: none;
+   border-radius: 25px;
+   font-size: 1rem;
+   cursor: pointer;
+   margin-top: 40px;
+}
+
+.contact-form-2 button:hover {
+   background-color: #333;
+   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+   .contact-container-2 {
+      grid-template-columns: 1fr;  
+      gap: 30px;
+   }
+
+   .contact-form-2 {
+      width: 100%;  
+      margin-left: 0;  
+   }
+
+   .con-info-2 {
+      display: block;  
+      width: 100%;  
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-form-2 {
+      width: 90%; 
+      margin-left: 5%; 
+   }
+
+   .contact-container-2 {
+      grid-template-columns: 1fr;  
+      gap: 20px;  
+   }
+
+   .con-info-2 {
+      display: block;  
+   }
+}
+
+@media (max-width: 480px) {
+   .contact-form-2 {
+      width: 100%;  
+      margin-left: 0;  
+   }
+
+   .contact-container-2 {
+      grid-template-columns: 1fr; 
+      padding: 10px; 
+   }
+
+   .contact-info-2 p {
+      font-size: 0.9rem;  
+   }
+}
